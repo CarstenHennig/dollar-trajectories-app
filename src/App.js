@@ -10,11 +10,11 @@ function App() {
 
   return (
     <div>
- <Table striped bordered hover>
+{/*  <Table striped bordered hover>
    <thead>
      <tr>
        <td ><h1>Timeline</h1> </td>
-       <td><h1>{MapLoader}</h1></td>
+       <td><h1>Löven</h1></td>
        <td><h1>Info Card</h1></td>
      </tr>
    </thead>
@@ -50,7 +50,8 @@ function App() {
 
    </tbody>
 
- </Table>
+ </Table> */}
+ <MapLoader/>
     </div>
   );
 }

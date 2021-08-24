@@ -7,7 +7,7 @@ import { useState } from "react"
  import Pic6 from "./images/06-cameroonCoast.png"
  import '../App.css';
  import { InfoBox1 } from "./InfoBox1"
- import { Button, ButtonGroup,Table, ListGroup,ListGroupItem, Card } from "react-bootstrap"
+ import { Button, ButtonGroup,Table } from "react-bootstrap"
  import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -21,9 +21,6 @@ import { useState } from "react"
 function ClickHandler() {
 
 	const [localeIndex, setLocaleIndex]=useState(0)
-
-	const [number, setNumber]=useState(1)
-
 	const locations = [
 		{place:"Berlin", URL:`${Pic1}`,info:`${InfoBox1.description}` },
 		{place:"berlin", URL:`${Pic2}`,info: `${InfoBox1.description}`},
@@ -58,39 +55,18 @@ function ClickHandler() {
 							</thead>
 							<tbody>
 								<tr>
-									<td className="MapDisplay1">
+									<td>
 										{location.place}
 									</td>
-									<td className="MapDisplay">
-										<img src={location.URL}/>
+									<td>
+										<img src={location.URL} alt="photo" />
 									</td>
-									<td className="MapDisplay2">
-										<Card>
-											<Card style={{ width: '18rem' }}>
-   <Card.Img variant="top" style={{width:"fit-content", objectFit: "none"}} src={`https://picsum.photos/283/300?random=${number}`}/>
-   <Card.Body>
-    <Card.Title style={{color: "seagreen", border:"1px solid", width:"fit-content"}} >Get Random Entries</Card.Title>
-    <Card.Text>
-     	{location.info}
-    </Card.Text>
-    </Card.Body>
-	</Card>	
-	</Card>
-</td>
-</tr>
-</tbody>
-</Table>
-<ListGroup className="list-group-flush">
-    <ListGroupItem>{location.place}</ListGroupItem>
-    <ListGroupItem variant="info">
-		<Button variant="outline-primary" onClick={()=> {
-		setLocaleIndex(localeIndex +1)
-			setNumber(number+1)
-		}} >Load Next</Button>
-	 <Button variant="outline-primary" onClick={(e)=> 
-		setLocaleIndex(localeIndex -1)} >Load Prev</Button>
-	</ListGroupItem>  
-  </ListGroup> 
+									<td>
+										{location.info}
+									</td>
+								</tr>
+							</tbody>
+						</Table>
 					</div>
 					
 				}
