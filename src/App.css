@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.Genesis{
+  width: max-content;
+  background-image:url("../src/components/images/01-joachim.png");
+  background-repeat: no-repeat;
+ background-size: contain;
+}
+#map{
+  height: 600px;
+  width: 50%;
+  border: red 2px solid;
+}
+body{
+  height: max-content;
+  width: 100%;
+}
