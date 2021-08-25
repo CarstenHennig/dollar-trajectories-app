@@ -2,14 +2,13 @@ import { useState } from "react"
  import Pic1 from "./images/01-joachim.png" 
  import Pic2 from "./images/02-pagnia.png"
  import Pic3 from "./images/03-southAmerica.png"
- import Pic4 from "./images/04-backToPagnia.png"
- import Pic5 from "./images/05-westAfrica.png"
- import Pic6 from "./images/06-cameroonCoast.png"
+  import Pic4 from "./images/06-cameroonCoast.png"
+  import Pic5 from "./images/UsCongress.jpg"
  import '../App.css';
  import { InfoBox1 } from "./InfoBox1"
- import { Button, ButtonGroup,Table, ListGroup,ListGroupItem, Card } from "react-bootstrap"
+ import { Alert,Button, ButtonGroup,Table, ListGroup,ListGroupItem, Card } from "react-bootstrap"
  import 'bootstrap/dist/css/bootstrap.min.css';
-
+import VideoPlayer from "./VideoPlayer"
 
  export default function MapLoader() {
 	 
@@ -19,84 +18,49 @@ import { useState } from "react"
  }
 
 function ClickHandler() {
-
-	const [localeIndex, setLocaleIndex]=useState(0)
-
-	const [number, setNumber]=useState(1)
-
-	const locations = [
-		{place:"Berlin", URL:`${Pic1}`,info:`${InfoBox1.description}` },
-		{place:"berlin", URL:`${Pic2}`,info: `${InfoBox1.description}`},
-		{place:"berlin", URL:`${Pic3}`,info: `${InfoBox1.description}`},
-		{place:"berlin", URL:`${Pic4}`,info: `${InfoBox1.description}`},
-		{place:"berlin", URL:`${Pic5}`,info: `${InfoBox1.description}`},
-		{place:"berlin", URL:`${Pic6}`,info: `${InfoBox1.description}`},		
-
+		const locations = [
+		{place:"Jachymov", URL:`${Pic1}`,info:`${InfoBox1.description}` },
+		{place:"Spain", URL:`${Pic2}`,info: `${InfoBox1.description}`},
+		{place:"South America", URL:`${Pic3}`,info: `${InfoBox1.description}`},		
+		{place:"Cameroon", URL:`${Pic4}`,info: `${InfoBox1.description}`},
+		{place:"United States", URL:`${Pic5}`,info: `${InfoBox1.description}`},		
 
 	]
 
-	return(
+	const [localeIndex, setLocaleIndex]=useState(0)
+	const [number, setNumber]=useState(1)
+	const [activePoint, setActivePoint]=useState(locations[0])
 
-		(
-			locations.map((location, index)=>{
-				if (localeIndex===index) {
-					return<div key={index}>
+return (
+	<div className="container">
+			<h1>Dollar History</h1>
+		<div className="titles">
+			<h2>Timeline</h2>
+			<h2>Locale</h2>
+			<h2>Info Card</h2>
+		</div>
+<div className="mainContents"> 
+	<div className="leftInfo">
+		<ul>
+			<li> 
+				<button onClick={()=> {setActivePoint(locations[0])}}> 
+											
+											<h1>Jachymov (Tolar)</h1>
+										</button>
+			</li>
+				<li> 4</li>
+					<li> 4</li>
+						<li> 4</li>
+							<li> 4</li>
+		</ul>
 
-						<Table>
-							<thead>
-								<tr>
-									<td>
-										TIMELINE
-									</td>
-									<td>
-										LOCALE
-									</td>
-									<td>
-										Info Card
-									</td>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td className="MapDisplay1">
-										{location.place}
-									</td>
-									<td className="MapDisplay">
-										<img src={location.URL}/>
-									</td>
-									<td className="MapDisplay2">
-										<Card>
-											<Card style={{ width: '18rem' }}>
-   <Card.Img variant="top" style={{width:"fit-content", objectFit: "none"}} src={`https://picsum.photos/283/300?random=${number}`}/>
-   <Card.Body>
-    <Card.Title style={{color: "seagreen", border:"1px solid", width:"fit-content"}} >Get Random Entries</Card.Title>
-    <Card.Text>
-     	{location.info}
-    </Card.Text>
-    </Card.Body>
-	</Card>	
-	</Card>
-</td>
-</tr>
-</tbody>
-</Table>
-<ListGroup className="list-group-flush">
-    <ListGroupItem>{location.place}</ListGroupItem>
-    <ListGroupItem variant="info">
-		<Button variant="outline-primary" onClick={()=> {
-		setLocaleIndex(localeIndex +1)
-			setNumber(number+1)
-		}} >Load Next</Button>
-	 <Button variant="outline-primary" onClick={(e)=> 
-		setLocaleIndex(localeIndex -1)} >Load Prev</Button>
-	</ListGroupItem>  
-  </ListGroup> 
-					</div>
-					
-				}
-			})
-		)
-		
-	)
+	</div>
+	<div className="centerInfo">map</div>
+	<div className="rightInfo">info media</div>
+</div>
+		</div>
+)
+
+	
 	
 } 
