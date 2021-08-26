@@ -5,7 +5,7 @@ import { useState } from "react"
   import Pic4 from "./images/06-cameroonCoast.png"
   import Pic5 from "./images/UsCongress.jpg"
  import '../App.css';
- import { InfoBox1 } from "./InfoBox1"
+ import { InfoBox1,InfoBox2, InfoBox3,InfoBox4, InfoBox5 } from "./InfoBox1"
  import { Alert,Button, ButtonGroup,Table, ListGroup,ListGroupItem, Card } from "react-bootstrap"
  import 'bootstrap/dist/css/bootstrap.min.css';
 import VideoPlayer from "./VideoPlayer"
@@ -19,11 +19,11 @@ import VideoPlayer from "./VideoPlayer"
 
 function ClickHandler() {
 		const locations = [
-		{place:"Jachymov", URL:`${Pic1}`,info:`${InfoBox1.description}` },
-		{place:"Spain", URL:`${Pic2}`,info: `${InfoBox1.description}`},
-		{place:"South America", URL:`${Pic3}`,info: `${InfoBox1.description}`},		
-		{place:"Cameroon", URL:`${Pic4}`,info: `${InfoBox1.description}`},
-		{place:"United States", URL:`${Pic5}`,info: `${InfoBox1.description}`},		
+		{place:"Jachymov", URL:`${Pic1}`,info:`${InfoBox1.description}`,lat:50.3585, lng:12.9347 },
+		{place:"Spain", URL:`${Pic2}`,info: `${InfoBox2.description}`,lat: 41.6523, lng: 4.7245},
+		{place:"South America", URL:`${Pic3}`,info: `${InfoBox3.description}`,lat:8.7832, lng: 55.4915},		
+		{place:"Cameroon", URL:`${Pic4}`,info: `${InfoBox4.description}`, lat:7.3697, lng:12.3547},
+		{place:"United States", URL:`${Pic5}`,info: `${InfoBox5.description}`, lat:37.0902, lng:95.7129},		
 
 	]
 
@@ -36,27 +36,57 @@ return (
 			<h1>Dollar History</h1>
 		<div className="titles">
 			<h2>Timeline</h2>
-			<h2>Locale</h2>
+			<h2>Locale: {activePoint.place} </h2>
 			<h2>Info Card</h2>
 		</div>
 <div className="mainContents"> 
 	<div className="leftInfo">
 		<ul>
 			<li> 
-				<button onClick={()=> {setActivePoint(locations[0])}}> 
-											
-											<h1>Jachymov (Tolar)</h1>
-										</button>
+				<button onClick={()=> 
+					{setActivePoint(locations[0])}}> 
+					<h3>Jachymov (Tolar)</h3>
+				</button>
 			</li>
-				<li> 4</li>
-					<li> 4</li>
-						<li> 4</li>
-							<li> 4</li>
-		</ul>
+			<li> 
+				<button onClick={()=> 
+					{setActivePoint(locations[1])}}> 
+					<h3>Spain(Taler)</h3>
+				</button>
 
+			</li>
+			<li> 
+				<button onClick={()=> 
+					{setActivePoint(locations[2])}}> 
+					<h3>South America</h3>
+				</button>
+
+			</li>
+						<li> 
+							<button onClick={()=> 
+					{setActivePoint(locations[3])}}> 
+					<h3>West Africa</h3>
+				</button>
+						</li>
+							<li> 
+							<button onClick={()=> 
+					{setActivePoint(locations[4])}}> 
+					<h3>USA (Dollar)</h3>
+				</button>	
+							</li>
+		</ul>
+		
 	</div>
-	<div className="centerInfo">map</div>
-	<div className="rightInfo">info media</div>
+	<div className="centerInfo" ><img src={activePoint.URL} /> </div>
+	<div className="rightInfo">
+		<div className="videoFrame">
+			<VideoPlayer/>
+		<div className="infoBoxed">
+			{activePoint.info}
+		</div>
+		</div>
+		
+		 </div>
 </div>
 		</div>
 )
