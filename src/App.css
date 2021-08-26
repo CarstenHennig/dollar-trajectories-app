@@ -1,69 +1,86 @@
-
-
 .App {
   text-align: center;
 }
 
-.Genesis{
+.Genesis {
   width: max-content;
-  background-image:url("../src/components/images/01-joachim.png");
+  /* background-image: url("../src/components/images/01-joachim.png"); */
   background-repeat: no-repeat;
- background-size: cover;
+  background-size: cover;
 }
 
-body{
-  height: max-content;
+body {
+  /* height: max-content; */
   width: 100%;
 }
-.MapDisplay{
+
+.MapDisplay {
   width: 40rem;
   height: 33rem;
-  border: aqua 5px double;
+  /* border: aqua 5px double; */
 }
-.MapDisplay1{
+
+.MapDisplay1 {
   width: 11rem;
   height: 33rem;
-  border: aqua 5px double;
+  /* border: aqua 5px double; */
 }
-.MapDisplay2{
+
+.MapDisplay2 {
   width: 15rem;
   height: 33rem;
-  border: aqua 5px double;
+  /* border: aqua 5px double; */
 }
-img{
-  margin-top: 9vh;
- width: 100%;
- height: 70%;
- object-fit: fill;
-  
-}
-.VideoPlayer{
 
+img {
+  /* margin-top: 9vh; */
   width: 100%;
-  border: aqua solid 3px;
-  
-}
-.videoFrame{
-  background-color: sienna;
-  height: 60%;
-}
-.infoBoxed{
-  background-color: silver;
-  height: auto;
+  height: 70%;
+  /* object-fit: fill; */
 }
 
-.titles{
-  display: grid;
-  grid-template-columns: 1fr 500px 1fr;
-  border: rgb(55, 163, 158) 1px solid;
+#image-info-card {
+  width: 100%;
+  /* height: 80%; */
+  object-fit: contain;
 }
-.mainContents{
+
+.VideoPlayer {
+  width: 60%;
+  /* border: aqua solid 3px; */
+}
+
+.videoFrame {
+  /* background-color: sienna; */
+  height: 100%;
+  text-align: center;
+}
+
+.infoBoxed {
+  /* background-color: silver; */
+  height: auto;
+  font-size: 1.1rem;
+}
+
+.titles {
   display: grid;
-  grid-template-columns: 1fr 500px 1fr;
-  border: rgb(43, 16, 16) 1px solid;
+  grid-template-columns: 1fr 600px 1fr;
+  /* border: rgb(55, 163, 158) 1px solid; */
+}
+
+.mainContents {
+  display: grid;
+  grid-template-columns: 1fr 600px 1fr;
+  /* border: rgb(43, 16, 16) 1px solid; */
   height: 70vh;
 }
-button{
+
+.selected {
+  color: black;
+  background-color: white;
+}
+
+button {
   align-content: stretch;
   background-color: inherit;
   border-bottom: 1px solid rgb(124, 63, 204);
@@ -71,52 +88,73 @@ button{
   border-left: 0px;
   border-right: 0px;
   width: 100%;
-  
 }
-button:active{
-  background-color: seagreen;
+
+button:visited {
+  color: grey;
+  background-color: rgb(170, 187, 177);
 }
-button:hover{
+
+button:hover {
   background-color: rgb(192, 220, 247);
+  transition-duration: 2s;
 }
-li{
+
+li {
   list-style: none;
   width: 100%;
 }
-h3{
+
+h1 {
+  text-align: center;
+  padding: 10px;
+  /* box-shadow: -1px 3px 3px 3px lightgray;
+  border-radius: 15px; */
+}
+
+h2 {
+  padding: 10px;
+  margin-left: 18px;
+  box-shadow: -1px 3px 3px 3px lightgray;
+  border-radius: 15px;
+}
+
+h3 {
   text-align: center;
 }
-.leftInfo{
-  background-color: rgb(131, 68, 128);
 
- 
+.leftInfo {
+  /* background-color: rgb(131, 68, 128); */
 }
-.centerInfo{
+
+.centerInfo {
   padding: 9px;
-  background-image: url("../src/components/images/Earth.jpg");
+  margin-left: 9px;
+  /* background-image: url("../src/components/images/Earth.jpg"); */
   background-repeat: no-repeat;
- background-size: cover;
+  background-size: cover;
+  border-left: 1px solid black;
 }
-.rightInfo{
-  background-color: chartreuse;
+
+.rightInfo {
+  /* background-color: chartreuse; */
+  padding: 9px;
+  margin-left: 9px;
   display: grid;
   grid-template-rows: 400px 2fr;
+  border-left: 1px solid black;
 }
 
-@media only screen and (max-width:410px){
-  .mainContents{
-  
-  grid-template-columns: 1fr ;
- 
-}
-.titles{
-  grid-template-columns: 1fr ;
-  
-}
-.titles h2 {
-   font-size: 12px;
-  
-}
+@media only screen and (max-width: 410px) {
+  .mainContents {
+    grid-template-columns: 1fr;
+  }
+  .titles {
+    grid-template-columns: 1fr;
+  }
+  .titles h2 {
+    font-size: 12px;
+  }
 }
 
 .footer {
@@ -127,14 +165,15 @@ h3{
 }
 
 .loading {
-  -webkit-animation: rotation 10s infinite linear;
+  animation: rotation 10s infinite linear;
   width: 15px;
+  transform: rotate(0deg);
 }
-@-webkit-keyframes rotation {
+@keyframes rotation {
   from {
-    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(259deg);
+    transform: rotate(360deg);
   }
 }
