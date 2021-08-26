@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/dollar-trajectories-app/static/css/main.9ed78a7c.chunk.css",
+    "main.js": "/dollar-trajectories-app/static/js/main.34bb1f7e.chunk.js",
+    "main.js.map": "/dollar-trajectories-app/static/js/main.34bb1f7e.chunk.js.map",
+    "runtime-main.js": "/dollar-trajectories-app/static/js/runtime-main.734eac51.js",
+    "runtime-main.js.map": "/dollar-trajectories-app/static/js/runtime-main.734eac51.js.map",
+    "static/js/2.c773ee74.chunk.js": "/dollar-trajectories-app/static/js/2.c773ee74.chunk.js",
+    "static/js/2.c773ee74.chunk.js.map": "/dollar-trajectories-app/static/js/2.c773ee74.chunk.js.map",
+    "index.html": "/dollar-trajectories-app/index.html",
+    "static/css/main.9ed78a7c.chunk.css.map": "/dollar-trajectories-app/static/css/main.9ed78a7c.chunk.css.map",
+    "static/js/2.c773ee74.chunk.js.LICENSE.txt": "/dollar-trajectories-app/static/js/2.c773ee74.chunk.js.LICENSE.txt",
+    "static/media/01-joachim.941db708.png": "/dollar-trajectories-app/static/media/01-joachim.941db708.png",
+    "static/media/02-pagnia.70d48a79.png": "/dollar-trajectories-app/static/media/02-pagnia.70d48a79.png",
+    "static/media/03-southAmerica.c8bbd6e2.png": "/dollar-trajectories-app/static/media/03-southAmerica.c8bbd6e2.png",
+    "static/media/06-cameroonCoast.60fd7e96.png": "/dollar-trajectories-app/static/media/06-cameroonCoast.60fd7e96.png",
+    "static/media/Jachymov-Joachimsthaler.2ea2b08a.jpeg": "/dollar-trajectories-app/static/media/Jachymov-Joachimsthaler.2ea2b08a.jpeg",
+    "static/media/SouthAmerica-spain-real.e2e6bcc8.jpeg": "/dollar-trajectories-app/static/media/SouthAmerica-spain-real.e2e6bcc8.jpeg",
+    "static/media/SpanienPhilippstaler.b0920525.jpeg": "/dollar-trajectories-app/static/media/SpanienPhilippstaler.b0920525.jpeg",
+    "static/media/UsCongress.a4aa19c3.jpg": "/dollar-trajectories-app/static/media/UsCongress.a4aa19c3.jpg",
+    "static/media/WestAfrica-CFA.a426f405.jpeg": "/dollar-trajectories-app/static/media/WestAfrica-CFA.a426f405.jpeg",
+    "static/media/dollarHistory.4cb92e2c.mp4": "/dollar-trajectories-app/static/media/dollarHistory.4cb92e2c.mp4",
+    "static/media/earthGlobe.b4e3c2aa.png": "/dollar-trajectories-app/static/media/earthGlobe.b4e3c2aa.png",
+    "static/media/silver-dollars-new.7b4f5820.jpg": "/dollar-trajectories-app/static/media/silver-dollars-new.7b4f5820.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.734eac51.js",
+    "static/js/2.c773ee74.chunk.js",
+    "static/css/main.9ed78a7c.chunk.css",
+    "static/js/main.34bb1f7e.chunk.js"
+  ]
+}
